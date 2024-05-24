@@ -22,7 +22,7 @@ model User {
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
   writtenPosts     Post[]          @relation("writtenPosts")
-  favoriatePosts   Post[]          @relation("favoritePosts")
+  favoritePosts    Post[]          @relation("favoritePosts")
   userPreference   UserPreference? @relation(fields: [userPreferenceId], references: [id])
   userPreferenceId String?         @unique
 }
