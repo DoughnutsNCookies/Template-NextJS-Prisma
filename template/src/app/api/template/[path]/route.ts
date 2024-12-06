@@ -3,10 +3,7 @@
  *
  * req parameter is required
  */
-export async function GET(
-  req: Request,
-  { params }: { params: { path: string } },
-) {
+export async function GET(req: Request, { params }: any) {
   const { path } = params;
   return new Response(`URL Dynamic Path Example: ${path}`);
 }
